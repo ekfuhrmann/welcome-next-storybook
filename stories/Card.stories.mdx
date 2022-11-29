@@ -1,0 +1,24 @@
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Card } from "../components/Card.tsx";
+import Button from "../components/Button.tsx";
+
+<Meta link="/foo" component={Card} />
+
+export const Template = (args) => <Card {...args} />;
+
+# Card
+
+Some intro text for this story.
+
+<Canvas>
+  <Story
+    name="Default Card"
+    args={{
+      link: "/my-page",
+      featured: true,
+      children: <Button size="small">Hello World</Button>,
+    }}
+  >
+    {(args) => <Card {...args} />}
+  </Story>
+</Canvas>
